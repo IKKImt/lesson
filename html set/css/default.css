@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/* default style [初期設定]
+=========================================================== */
+html{
+	font-size:small;
+	overflow-y:scroll;
+}
+
+body,div,
+dl,dt,dd,
+ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+pre,blockquote,
+form,fieldset,input,textarea,
+p,th,td{
+	margin:0;
+	padding:0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var{
+	font-style:normal;
+	font-weight:normal;
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+	font-size:100%;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+
+caption,th{
+	text-align:left;
+}
+
+q:before,q:after{
+	content:'';
+}
+
+object,embed{
+	vertical-align:top;
+}
+
+hr,legend{
+	display:none;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+	font-size:100%;
+}
+
+img{
+	vertical-align:bottom;
+}
+
+img,abbr,acronym,fieldset{
+	border:0;
+}
+
+ul,ol{
+	list-style-type:none;
+}
+
+/* ===========================================================
+   body
+=========================================================== */
+body{
+	background:#FFFFFF;
+	font-family:"メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+	font-size:93%;
+	line-height:1.4;
+	color:#000000;
+}
+
+
+
+/* ===========================================================
+
+   link style
+
+=========================================================== */
+a:link{
+	color:#0099CC;
+}
+
+a:visited{
+	color:#0099CC;
+}
+
+a:hover{
+	text-decoration:none;
+	color:#0099CC;
+}
+
+a:active{
+	color:#0099CC;
+}
+
+
+
+/* ===========================================================
+
+   ClearFix
+
+=========================================================== */
+/*.clearfix:before,
+.clearfix:after{
+	content:"";
+	display:table;
+}
+
+.clearfix{
+	clear:both;
+	/zoom:1;
+}*/
+
+
+
+.clearfix:after{
+height: 0;
+visibility: hidden;
+content: ".";
+display: block;
+clear: both;
+}
+
+*:first-child+html .clearfix{
+height: 1%;
+}
+
+* html .clearfix{
+height: 1%;
+}

@@ -1,3 +1,8 @@
+/*
+---------------------------------------------
+初期設定
+---------------------------------------------
+*/
 *{
 	margin: 0;
 	padding: 0;
@@ -20,6 +25,11 @@ li{
 	height: 100%;
 }
 
+/*
+---------------------------------------------
+ヘッダー
+---------------------------------------------
+*/
 #global-header{
 	padding: 14px 0;
 	overflow: hidden;
@@ -59,6 +69,11 @@ li{
 	border-right: 1px solid #BEBFC1;
 }
 
+/*
+---------------------------------------------
+メイン
+---------------------------------------------
+*/
 #main{
 }
 
@@ -69,4 +84,67 @@ li{
 }
 
 #main ul li{
+}
+
+/*
+---------------------------------------------
+コンテンツ
+---------------------------------------------
+*/
+#content{
+}
+
+/*
+---------------------------------------------
+What's New
+---------------------------------------------
+*/
+#newsArea{
+	background-image: url("../images/newsarea-border.jpg");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	overflow: hidden;
+	padding: 60px 0 95px;
+}
+
+#newsArea h2{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#newsAreaInner{
+	overflow: hidden;
+	width: 1283px;
+	margin: 0 auto;
+}
+
+#newsArea ul{
+	float: left;
+	padding: 0 10px;
+	border-right: 1px solid #666666;
+}
+
+#newsArea ul:last-child{
+	border-right: none;
+}
+
+#newsArea ul li{
+	background-image: url("../images/news-select.gif");
+	background-size: 300px 10px;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	padding-bottom: 20px;
+	width: 300px;
+}
+
+#newsArea ul li:hover{
+	background-image: url("../images/news-selected.gif");
+}
+
+#newsArea ul li dl{
+	margin-top: 10px;
+}
+
+#newsArea ul li dl dt{
+	text-align: center;
 }

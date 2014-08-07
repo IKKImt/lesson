@@ -44,3 +44,29 @@ li{
 	margin-right: 10px;
 	height: 22px;
 }
+
+#global-navi{
+
+}
+
+#global-navi ul{
+	overflow: hidden;
+	background-image: url("../common/images/navi-back.jpg");
+}
+
+#global-navi ul li{
+	float: left;
+	border-right: 1px solid #BEBFC1;
+}
+
+#main{
+}
+
+#main ul{
+}
+
+#main ul li{
+}
+
+#main ul li{
+}

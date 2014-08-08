@@ -1,0 +1,82 @@
+/*
+---------------------------------------------
+初期設定
+---------------------------------------------
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2{
+	font-size: 90%;
+}
+
+img{
+	vertical-align: bottom;
+}
+
+li{
+	list-style-type: none;
+}
+
+#wrap{
+	width: 100%;
+	height: 100%;
+}
+
+/*
+---------------------------------------------
+ヘッダー
+---------------------------------------------
+*/
+#global-header{
+	padding: 14px 0;
+	overflow: hidden;
+	background-color: #000;
+}
+
+#logo{
+	float: left;
+	margin-left: 10px;
+}
+
+#snsArea{
+	float: right;
+}
+
+#snsArea ul{
+	overflow: hidden;
+}
+
+#snsArea ul li{
+	float: left;
+	margin-right: 10px;
+	height: 24px;
+}
+
+#global-navi{
+
+}
+
+#global-navi ul{
+	overflow: hidden;
+	background-image: url("../images/navi-back.jpg");
+}
+
+#global-navi ul li{
+	float: left;
+	border-right: 1px solid #BEBFC1;
+}
+
+/*---------------------------------------------
+footer
+---------------------------------------------*/
+#footer{
+	background-color: #666;
+}
+
+#footer p{
+	text-align: right;
+	padding: 10px;
+}

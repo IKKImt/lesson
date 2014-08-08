@@ -12,7 +12,9 @@
 #main ul li{
 }
 
-#main ul li{
+#main ul li img{
+	width: 100%;
+	height: auto;
 }
 
 /*

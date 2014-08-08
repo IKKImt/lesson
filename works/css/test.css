@@ -140,3 +140,94 @@ infomation
 .grey{
 	background-color: #EEE;
 }
+
+/*---------------------------------------------
+スマホ用
+---------------------------------------------*/
+@media screen and (max-width: 480px) {
+	#newsArea{
+		padding: 30px 0;
+		background-image: none;
+	}
+
+	#newsArea h2{
+		margin-bottom: 15px;
+	}
+
+	#newsAreaInner{
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	#newsArea ul{
+		float: none;
+		padding: 0;
+		border: none;
+	}
+
+	#newsArea ul li{
+		background-image: none;
+	}
+
+	#newsArea ul li:hover{
+		background-image: none;
+	}
+
+	.infoArea{
+		margin-bottom: 30px;
+		border-top: 1px dotted #000;
+	}
+
+	.infoArea:last-child{
+		margin-bottom: 0;
+		padding-bottom: 30px;
+	}
+
+	.infoAreaInner{
+		padding: 0;
+		width: 310px;
+	}
+
+	.infoImg{
+		width: 310px;
+		display: none;
+	}
+
+	.infoImg img{
+		width: 310px;
+		height: auto;
+	}
+
+	.left,.right .infoImg{
+		float: none;
+	}
+
+	.ml80,.mr80{
+		margin: 0;
+	}
+
+	.infoText{
+		position: initial;
+		width: 310px;
+		height: auto;
+	}
+
+	.infoText h2{
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+
+	.infoText p.btnMore{
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	.infoText .btnMore{
+		position: initial;
+	}
+
+	#footer p{
+		text-align: center;
+	}
+}

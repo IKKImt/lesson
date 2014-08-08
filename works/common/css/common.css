@@ -80,3 +80,31 @@ footer
 	text-align: right;
 	padding: 10px;
 }
+
+
+/*---------------------------------------------
+スマホ用
+---------------------------------------------*/
+@media screen and (max-width: 480px) {
+	#logo{
+		float: none;
+		margin-left: 0;
+	}
+
+	#logo h1{
+		text-align: center;
+	}
+
+	#snsArea{
+		display: none;
+	}
+
+	#global-navi ul{
+		height: 20px;
+	}
+
+	#global-navi ul li{
+		display: none;
+	}
+
+}

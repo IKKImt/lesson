@@ -101,7 +101,11 @@ infomation
 	height: 350px;
 }
 
-.btnMore{
+.infoText h2{
+	margin-bottom: 60px;
+}
+
+.infoText .btnMore{
 	position: absolute;
 	bottom: 0;
 	right: 0;

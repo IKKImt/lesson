@@ -1,0 +1,52 @@
+//- -------------------------------------------------------
+//- 挿入するブロックの予約
+//- -------------------------------------------------------
+block pageClass
+- var assetsCss = "/assets/css/"
+- var assetsImg = "/assets/img/"
+- var assetsJs  = "/assets/js/"
+
+//- コンテンツエリア用クラス
+block contentColumn
+
+//- 確認用リストページで使うテストドメイン格納
+block domain
+
+
+//- -------------------------------------------------------
+//- ミックスイン
+//- -------------------------------------------------------
+
+
+
+//- mixin mailInfo
+//- 	|info@exparo.com
+
+//- mixin mailHours
+//- 	|受付時間：24時間　365日
+
+//- mixin telInfo
+//- 	|03-3359-0028
+
+//- mixin telInfo02
+//- 	|+81-3-3359-0028
+
+//- mixin telHours
+//- 	|受付時間：平日9：00～18：00
+
+//- mixin hours
+//- 	|営業時間：10：00 - 17:00
+
+
+
+//- mixin entryBtn(onclick, href, target)
+//- 	p.gnBtn
+//- 		a(onclick="#{onclick}", href="#{href}", target="#{target}")
+//- 			span.png_bg
+//- 				|ASKULを申し込む
+
+//- mixin pageTop
+//- 	.pageTop
+//- 		p
+//- 			a(href="#page")
+//- 				img(src="#{assetsImg}/common/icon_arrow_pagetop01.gif", alt="")

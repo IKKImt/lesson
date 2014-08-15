@@ -1,0 +1,80 @@
+include _config.jade
+// if IE 8
+	!!! transitional
+	<html class="no-js ie ie8">
+// if IE 9
+	!!! 5
+	<html class="no-js ie ie9">
+// [if (gte IE 10)|!(IE)]><!
+!!! 5
+html(class="no-js")
+	// <![endif]
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge, chrome=1")
+		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1")
+		block title
+			title ページタイトル
+		block keywords
+			meta(name="keywords", content="")
+		block description
+			meta(name="description", content="")
+		block facebook
+			meta(property="og:title", content="記事のタイトル")
+			meta(property="og:type", content="article")
+			meta(property="og:description", content="記事の説明")
+			meta(property="og:url", content="記事のURL")
+			meta(property="og:image", content="画像のURL")
+			meta(property="og:site_name", content="サイトのタイトル")
+			meta(property="og:locale", content="言語")
+			meta(property="fb:admins", content="facebookのユーザーID")
+			meta(property="fb:app_id", content="facebookのアプリID")
+		block canonical
+			link(rel="canonical", href="")
+		block css
+			link(rel="stylesheet", type="text/css", href="#{assetsCss}main.css", media="all")
+			link(rel="stylesheet", type="text/css", href="#{assetsCss}add_style.css", media="all")
+			//- link(rel="stylesheet", type="text/css", href="#{assetsCss}shadowbox.css", media="all")
+		link(rel="stylesheet", type="text/css", href="#{assetsCss}print.css", media="print")
+		// if lt IE 9
+			//- IE8 HTML5タグ用
+			script(type="text/javascript", src="#{assetsJs}html5shiv-printshiv.js", charset="utf-8")
+			//- IE用 css3 要素対応 border-radius, box-shadow, linear-gradient など【※※※※※ひょっとして必要ないのかも※※※※※】
+			//- script(type="text/javascript", src="#{assetsJs}nwmatcher-1.2.5.js", charset="utf-8")
+			//- IE用 css3 セレクター
+			script(type="text/javascript", src="#{assetsJs}selectivizr-min.js", charset="utf-8")
+	body
+		div(id="page", class="#{pageClass}")
+			//- ヘッダー
+			block header
+				include _header.jade
+
+			//- グローバルナビ
+			//- block navi
+			//- 	include navi.jade
+
+			//- メインビジュアル
+			block mainVis
+
+			//- コンテンツエリア
+			div(id="contents", class="#{contentColumn}")
+				block topicPath
+				block main
+				block side
+
+			//- メインビジュアル
+			//- block topArea02
+
+			//- ホームへ戻るボタン
+			//- block homeLink
+
+			//- フッター
+			block footer
+				include _footer.jade
+
+		block script
+			script(type="text/javascript", src="#{assetsJs}jquery-1.9.1.min.js", charset="utf-8")
+			script(type="text/javascript", src="#{assetsJs}jqueryAutoHeight.js", charset="utf-8")
+			//- script(type="text/javascript", src="#{assetsJs}corner.js", charset="utf-8")
+			//- script(type="text/javascript", src="#{assetsJs}shadowbox.js", charset="utf-8")
+			script(type="text/javascript", src="#{assetsJs}function.js", charset="utf-8")

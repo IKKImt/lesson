@@ -1,0 +1,438 @@
+/* ===========================================================
+
+	 調整用スタイル
+
+	 1. margin
+			- margin top
+			- margin right
+			- margin bottom
+			- margin left
+			- margin top & bottom
+			- margin right & left
+			- negative margin top
+
+	 2. padding
+			- padding top
+			- padding right
+			- padding bottom
+			- padding left
+			- padding top & bottom
+			- padding right & left
+
+	 3. margin & padding
+			- top
+			- bottom
+
+	 4. border
+			- border top
+			- border bottom
+			- border double [二重線]
+			- border dashed [破線]
+
+	 5. text
+			- text align
+			- text color
+			- text weight
+			- text line-height
+			- text decoration
+			- text size
+
+	 6. block
+			- text size
+
+	 7. width
+
+	 8. height
+
+	 9. img
+			- vertical align
+
+	 10. backgrund
+
+=========================================================== */
+
+
+
+/* ===========================================================
+
+	 1. margin
+
+=========================================================== */
+.mg0
+	margin 0 !important
+
+
+/* margin top
+----------------------------------------------------------- */
+for row in 0 .. 100
+	.mgt{row}
+		margin-top 1px * row !important
+
+
+/* margin right
+----------------------------------------------------------- */
+for row in 0 .. 100
+	.mgr{row}
+		margin-right 1px * row !important
+
+
+/* margin bottom
+----------------------------------------------------------- */
+for row in 0 .. 100
+	.mgb{row}
+		margin-bottom 1px * row !important
+
+
+/* margin left
+----------------------------------------------------------- */
+for row in 0 .. 100
+	.mgl{row}
+		margin-left 1px * row !important
+
+
+/* margin top & bottom
+----------------------------------------------------------- */
+for row in 1 .. 60
+	.mgtb{row}
+		margin 1px * row 0 !important
+
+
+/* margin right & left
+----------------------------------------------------------- */
+for row in 1 .. 10
+	.mgrl{row}
+		margin 0 1px * row !important
+
+
+/* negative margin top
+----------------------------------------------------------- */
+.mgt10N
+	margin-top -10px !important
+
+
+/* ===========================================================
+
+	 2. padding
+
+=========================================================== */
+for row in 0 .. 20
+	.pd{row}
+		padding 1px * row !important
+
+
+/* padding top
+----------------------------------------------------------- */
+for row in 0 .. 100
+	.pdt{row}
+		padding-top 1px * row !important
+
+.pdt1em
+	padding-top 1em !important
+.pdt2em
+	padding-top 2em !important
+
+
+/* padding right
+----------------------------------------------------------- */
+for row in 0 .. 100
+	.pdr{row}
+		padding-right 1px * row !important
+
+
+/* padding bottom
+----------------------------------------------------------- */
+for row in 0 .. 100
+	.pdb{row}
+		padding-bottom 1px * row !important
+
+
+/* padding left
+----------------------------------------------------------- */
+for row in 0 .. 100
+	.pdl{row}
+		padding-left 1px * row !important
+
+
+/* padding top & bottom
+----------------------------------------------------------- */
+for row in 1 .. 60
+	.pdtb{row}
+		padding 1px * row 0 !important
+
+
+/* padding right & left
+----------------------------------------------------------- */
+for row in 1 .. 40
+	.pdrl{row}
+		padding 0 1px * row !important
+
+
+/* ===========================================================
+
+	 3. margin & padding
+
+=========================================================== */
+
+
+/* top
+----------------------------------------------------------- */
+for row in 1 .. 30
+	.mpt{row}
+		margin-top 1px * row !important
+		padding-top 1px * row !important
+
+
+/* bottom
+----------------------------------------------------------- */
+for row in 1 .. 30
+	.mpb{row}
+		margin-bottom 1px * row !important
+		padding-bottom 1px * row !important
+
+
+/* ===========================================================
+
+	 4. border
+
+=========================================================== */
+.bd0
+	border none !important
+// .bd01
+// 	border 1px solid #C0C0C0 !important
+// .bd02
+// 	border 1px solid #CCCCCC !important
+
+
+/* border top
+----------------------------------------------------------- */
+.bdt1
+	border-top 1px solid #C0C0C0 !important
+
+
+/* border bottom
+----------------------------------------------------------- */
+.bdb1
+	border-bottom 1px solid #C0C0C0 !important
+
+
+/* border double [二重線]
+----------------------------------------------------------- */
+// .bdDouble01
+// 	border 3px double #D9D9D9 !important
+
+
+/* border dashed [破線]
+----------------------------------------------------------- */
+// .bdDashed01
+// 	border 1px dashed #D9D9D9 !important
+// .bdDashed02
+// 	border-top 1px dashed #D9D9D9 !important
+// .bdDashed03
+// 	border-bottom 1px dashed #D9D9D9 !important
+
+
+
+/* ===========================================================
+
+	 5. text
+
+=========================================================== */
+
+
+/* text align
+----------------------------------------------------------- */
+.textCenter
+	text-align center !important
+.textRight
+	text-align right !important
+.textLeft
+	text-align left !important
+
+
+/* text color
+----------------------------------------------------------- */
+.red1
+	color #cc0000 !important
+// .red02
+// 	color #CC3300 !important
+// .red03
+// 	color #990000 !important
+// .blue01
+// 	color #2473D1 !important
+.gray1
+	color #999999 !important
+
+
+/* text weight
+----------------------------------------------------------- */
+.textNormal
+	font-weight normal !important
+.textBold
+	font-weight bold !important
+
+
+/* text line-height
+----------------------------------------------------------- */
+.textHight1
+	line-height 1 !important
+.textHight1_2
+	line-height 1.2 !important
+.textHight1_4
+	line-height 1.4 !important
+.textHight1_5
+	line-height 1.5 !important
+.textHight1_6
+	line-height 1.6 !important
+.textHight1_7
+	line-height 1.7 !important
+.textHight1_8
+	line-height 1.8 !important
+.textHight1_9
+	line-height 1.9 !important
+.textHight2
+	line-height 2 !important
+.textHight2_2
+	line-height 2.2 !important
+.textHight2_4
+	line-height 2.4 !important
+.textHight2_6
+	line-height 2.6 !important
+.textHight2_8
+	line-height 2.8 !important
+.textHight3
+	line-height 3 !important
+.textHight3_2
+	line-height 3.2 !important
+.textHight3_4
+	line-height 3.4 !important
+
+
+/* text decoration
+----------------------------------------------------------- */
+.textCancel
+	text-decoration line-through !important
+.textUnderline
+	text-decoration  underline !important
+
+
+/* text size
+----------------------------------------------------------- */
+for row in 9 .. 34
+	.textSize{row}
+		font-size 1px * row !important
+
+
+/* ===========================================================
+
+	 6. block
+
+=========================================================== */
+.block1
+	display block !important
+.block2
+	display inline !important
+.block3
+	display inline-block !important
+
+
+
+/* ===========================================================
+
+	 7. width
+
+=========================================================== */
+.wAuto
+	width auto !important
+.w20
+	width 20px !important
+.w30
+	width 30px !important
+.w40
+	width 40px !important
+.w50
+	width 50px !important
+.w60
+	width 60px !important
+.w70
+	width 70px !important
+.w80
+	width 80px !important
+.w90
+	width 90px !important
+.w100
+	width 100px !important
+.w110
+	width 110px !important
+.w120
+	width 120px !important
+.w130
+	width 130px !important
+.w140
+	width 140px !important
+.w150
+	width 150px !important
+.w160
+	width 160px !important
+.w170
+	width 170px !important
+.w180
+	width 180px !important
+.w190
+	width 190px !important
+.w200
+	width 200px !important
+.w250
+	width 250px !important
+.w260
+	width 260px !important
+.w280
+	width 280px !important
+.w300
+	width 300px !important
+.w340
+	width 340px !important
+.w450
+	width 450px !important
+.w500
+	width 500px !important
+
+.w100per
+	width 100% !important
+
+
+
+/* ===========================================================
+
+	 8. height
+
+=========================================================== */
+.h40
+	height 40px !important
+
+
+
+/* ===========================================================
+
+	 9. img
+
+=========================================================== */
+
+
+/* vertical align
+----------------------------------------------------------- */
+.vArignTp
+	vertical-align top !important
+.vArignMd
+	vertical-align middle !important
+.vArignBt
+	vertical-align bottom !important
+
+
+
+/* ===========================================================
+
+	 10. background
+
+=========================================================== */
+.bgWhite
+	background-color #FFF

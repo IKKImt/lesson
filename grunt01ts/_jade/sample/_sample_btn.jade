@@ -1,0 +1,161 @@
+extends ../partial/_base.jade
+
+//- コンテンツカラム
+block contentColumn
+	- var contentColumn = "oneColumn"
+
+//- ページクラス
+block pageClass
+	- var pageClass = ""
+
+//- 個別CSS
+//- block css
+//- 	link(rel="stylesheet", href="#{assetsCss}style.css")
+
+//- ページタイトル
+block title
+	|ボタンサンプル
+
+//- サイドカラム
+//- block side
+//- 	include partial/jade/side.jade
+
+//- コンテンツ
+block main
+	#main
+		.inner
+			.contentTitleH1
+				h1.title ボタンサンプル
+
+			.contentTitleH2.attend
+				h2.title 汎用ボタン
+
+			//- --------------------------------------------------------
+			.contentTitleH3
+				h3.title
+					span
+					|幅指定なし
+
+			p.gnBtn
+				a(href="") あああああ あああああ あああああ あああああ
+
+			//- --------------------------------------------------------
+			.contentTitleH3
+				h3.title
+					span
+					|幅指定あり
+
+			p.gnBtn.min120
+				a(href="") あああああ あああああ あああああ あああああ
+
+			.btnWrap.row
+				ul
+					li.gnBtn.min120
+						a(href="") あああああ あああああ あああああ あああああ
+
+			//- --------------------------------------------------------
+			.contentTitleH3
+				h3.title
+					span
+					|横並び
+
+			.btnWrap.row
+				ul
+					li.gnBtn.min120
+						a(href="") あああああ あああああ あああああ あああああ
+					li.gnBtn.min120
+						a(href="") いいいいい いいいいい
+
+			.textCenter
+				p.gnBtnIb.min120
+					a(href="") あああああ あああああ あああああ あああああ
+				p.gnBtnIb.min120
+					a(href="") いいいいい いいいいい
+
+			//- --------------------------------------------------------
+			.contentTitleH3
+				h3.title
+					span
+					|タブ
+
+			.tabBtnWrap
+				ul
+					li.select 主要通貨
+					li アジア/オセアニア
+					li アメリカ/中南米
+					li ヨーロッパ
+
+			.mgt30
+				p.gdColors01.min120.mgb30
+					a(href="") あああああ
+				p.gdColors01.select.min120
+					a(href="") あああああ
+
+
+			//- --------------------------------------------------------
+			.contentTitleH2.attend
+				h2.title カラーボタン
+
+			.contentTitleH3
+				h3.title
+					span
+					|通常ボタン（幅指定あり）
+
+			.btnWrap.row
+				ul
+					li.btnSet01.min200
+						a(href="") あああああ あああああ あああああ あああああ
+					li.btnSet02.min200
+						a(href="") いいいいい
+					li.btnSet03.min200
+						a(href="") あああああ あああああ あああああ あああああ
+					li.btnSet04.min200
+						a(href="") あああああ あああああ あああああ あああああ
+					li.btnSet05.min200
+						a(href="") あああああ あああああ あああああ あああああ
+
+			.error04
+				p.title 幅指定ありはボタンが多いと溢れる
+
+			//- --------------------------------------------------------
+			.contentTitleH3
+				h3.title
+					span
+					|通常ボタン（幅指定なし）
+
+			.btnWrap.row
+				ul
+					li.btnSet01
+						a(href="") あああああ あああああ あああああ あああああ
+					li.btnSet02
+						a(href="") あああああ あああああ あああああ あああああ
+					li.btnSet03
+						a(href="") あああああ あああああ あああああ あああああ
+					li.btnSet04
+						a(href="") あああああ あああああ あああああ あああああ
+					li.btnSet05
+						a(href="") あああああ あああああ あああああ あああああ
+
+
+
+			//- --------------------------------------------------------
+			.contentTitleH3
+				h3.title
+					span
+					|フォームボタン
+
+			.btnWrap
+				input(type="submit", value="次へ", class="submit")
+
+			.btnWrap.row
+				ul
+					li
+						input(type="button", value="ひとつ", class="btnSet01 min120")
+					li
+						input(type="button", value="ふたつ", class="btnSet02 min120")
+					li
+						input(type="button", value="みっつ", class="btnSet03 min120")
+					li
+						input(type="button", value="よっつ", class="btnSet04 min120")
+					li
+						input(type="button", value="いつつ", class="btnSet05 min120")

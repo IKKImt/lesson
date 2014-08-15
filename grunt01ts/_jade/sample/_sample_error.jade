@@ -1,0 +1,72 @@
+extends ../partial/_base.jade
+
+//- コンテンツカラム
+block contentColumn
+	- var contentColumn = "oneColumn"
+
+//- ページクラス
+block pageClass
+	- var pageClass = ""
+
+//- 個別CSS
+//- block css
+//- 	link(rel="stylesheet", href="#{assetsCss}style.css")
+
+//- ページタイトル
+block title
+	|エラーサンプル
+
+//- サイドカラム
+//- block side
+//- 	include partial/jade/side.jade
+
+//- コンテンツ
+block main
+	#main
+		.inner
+			.contentTitleH1
+				h1.title エラーサンプル
+
+			//- .contentTitleH2.attend
+			//- 	h2.title H2タイトル
+
+			.error01
+				p.title 入力エラーがあります。入力内容をご確認ください。
+				.errorList
+					ol
+						li 既に登録されているIDです。他のIDを入力してください。
+						li パスワードを入力してください。
+						li パスワード再入力を入力してください。
+
+			.error02
+				.title 本人確認書類の記載どおりにご記入ください。
+				ul
+					li 入力例：ヤマダ　タロウ　様
+					li 日本語表記（姓）Family name → 山田 （名）First name → 太郎
+					li 英語表記（姓）Family name → YAMADA （名）First name → TARO
+
+			.error03
+				p.title
+					|残り12箇所の入力・修正をお願いします
+					input(type="button", name="error", value="該当箇所へ移動↑")
+
+			.error04
+				p.title
+					a(href="", target="_blank") 詐欺被害にご注意ください。
+
+			.error05
+				ul.notesDot.red
+					li お客様は、表示されている米ドル相当額を現地通貨で受け取ることとなります。
+					li
+						|表示されている米ドルから現地通貨への為替レートの計算にあたっては、参考レートとして以下のリンク先にあるツールが使用可能です。
+						br
+						a(href="http://www.bloomberg.co.jp/tools/calculators/currency.html")
+							|http://www.bloomberg.co.jp/tools/calculators/currency.html
+					li 上記リンク上にて計算された現地通貨の額はあくまで参考レートによるものです。実際は受取時点におけるマネーグラム取扱店における為替レートが適用されます。
+
+			.error06
+				.title 重要
+				p
+					|各種証明書類の準備がすぐに終わらない場合は、次に進んで、この画面を閉じていただくことができます。
+					br
+					|当社からお送りしていますEメールにこちらのページへのリンクが記載されていますので、各種証明書類がご用意できた際にこのページに戻ることが可能です。

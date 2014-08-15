@@ -1,0 +1,62 @@
+extends ../partial/_base.jade
+
+//- コンテンツカラム
+block contentColumn
+	- var contentColumn = "oneColumn"
+
+//- ページクラス
+block pageClass
+	- var pageClass = ""
+
+//- 個別CSS
+//- block css
+//- 	link(rel="stylesheet", href="#{assetsCss}style.css")
+
+//- ページタイトル
+block title
+	|タイトルサンプル
+
+//- サイドカラム
+//- block side
+//- 	include partial/jade/side.jade
+
+//- コンテンツ
+block main
+	#main
+		.inner
+			.contentTitleH1
+				h1.title H1タイトル
+
+			.contentTitleH2
+				h2.title H2タイトル
+				p テキスト
+
+			.contentTitleH2.attend
+				h2.title H2タイトル
+				p タイトルとテキストの間隔が狭い場合
+
+			.contentTitleH2.red
+				h2.title H2タイトル
+
+			.contentTitleH2.blue
+				h2.title H2タイトル
+
+			.contentTitleH3
+				h3.title
+					span
+					|H3タイトル
+
+			.gnTitle.gray
+				p.title
+					span
+					|汎用タイトル
+
+			.gnTitle.red
+				p.title
+					span
+					|汎用タイトル
+
+			.gnTitle.blue
+				p.title
+					span
+					|汎用タイトル

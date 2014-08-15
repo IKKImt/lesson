@@ -1,0 +1,480 @@
+extends ../partial/_base.jade
+
+//- コンテンツカラム
+block contentColumn
+	- var contentColumn = "oneColumn"
+
+block domain
+	- var domain = "http://enremit.overplus.jp/"
+
+//- ページクラス
+//- block pageClass
+//- 	- var pageClass = ""
+
+//- 個別CSS
+block css
+	link(rel="stylesheet", href="#{assetsCss}list.css")
+
+//- サイドカラム
+//- block side
+//- 	include partial/jade/side.jade
+
+mixin th()
+	tr
+		th.cell01 画面ID
+		th.cell02 ページ名
+		th.cell03 jpg
+		th.cell04 状態
+
+//- コンテンツ
+block main
+	#main
+		.inner
+			.pageLinks
+				ol.notesDot
+					li: a(href="#pageLink01") トップ
+					li: a(href="#pageLink02") 共通
+					li: a(href="#pageLink03") 会員加入
+					li: a(href="#pageLink04") マイページ
+					li: a(href="#pageLink05") 仕向送金申込
+					li: a(href="#pageLink06") 便利な機能
+					li: a(href="#pageLink07") サポートセンター
+					li: a(href="#pageLink00") コーディングサンプル
+
+			article#pageLink01
+				.contentTitleH1
+					h1.title トップ
+
+				.contentTitleH2
+					h2.title 1-1-0
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "1-1-0_F101001"
+							td.cell01 F101001
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") トップページ
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 作成中
+
+			article#pageLink02
+				.contentTitleH1
+					h1.title 共通
+
+				.contentTitleH2
+					h2.title 1-1-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "1-1-1_F101011a"
+							td.cell01 F101011
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") バリデーションエラー表示
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+			article#pageLink03
+				.contentTitleH1
+					h1.title 会員加入
+
+				.contentTitleH2
+					h2.title 1-1-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "1-1-1_F101011b"
+							td.cell01 F101011
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 利用規約表示
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+				.contentTitleH2
+					h2.title 1-1-2
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "1-1-2_F101021"
+							td.cell01 F101021
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 会員情報入力（個人）
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+						tr
+							file = "1-1-2_F101022"
+							td.cell01 F101022
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 入力内容確認（個人）
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+						tr
+							file = "1-1-2_F101023"
+							td.cell01 F101023
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 会員登録完了
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+				.contentTitleH2
+					h2.title 1-1-3
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "1-1-3_F102031"
+							td.cell01 F102031
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 本人確認書類アップロード
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+						tr
+							file = "1-1-3_F102033"
+							td.cell01 F102033
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 本人確認のお手続き状態（個人）
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+			article#pageLink04
+				.contentTitleH1
+					h1.title マイページ
+
+				.contentTitleH2
+					h2.title 2-1-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "2-1-1_F201011a"
+							td.cell01 F201011
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") ログイン
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+				.contentTitleH2
+					h2.title 2-3-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "2-3-1_F203012"
+							td.cell01 F203012
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 送金履歴詳細&#x2460;
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+				.contentTitleH2
+					h2.title 2-5-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "2-5-1_F205011"
+							td.cell01 F205011
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 返金口座指定
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+				.contentTitleH2
+					h2.title 2-6-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "2-6-1_F206011"
+							td.cell01 F206011
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") マイページトップ
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+			article#pageLink05
+				.contentTitleH1
+					h1.title 仕向送金申込
+
+				.contentTitleH2
+					h2.title 3-1-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "3-1-1_F301011"
+							td.cell01 F301011
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 送金情報入力（10minute Service）
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+						tr
+							file = "3-1-1_F301016"
+							td.cell01 F301016
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 送金申込完了
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+			article#pageLink06
+				.contentTitleH1
+					h1.title 便利な機能
+
+				.contentTitleH2
+					h2.title 2-1-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "2-1-1_F201011b"
+							td.cell01 F201011
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 送金額計算
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+						tr
+							file = "2-1-1_F201012"
+							td.cell01 F201012
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 為替レート一覧
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+						tr
+							file = "2-1-1_F201014"
+							td.cell01 F201014
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") 為替レート通貨別照会
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+			article#pageLink07
+				.contentTitleH1
+					h1.title サポートセンター
+
+				.contentTitleH2
+					h2.title 4-1-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "4-1-1_F401012"
+							td.cell01 F401012
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") お問い合わせ入力
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+				.contentTitleH2
+					h2.title 4-2-1
+
+				.gnTable.list
+					table
+						+th()
+						tr
+							file = "4-2-1_F402011"
+							td.cell01 F402011
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") FAQトップ
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+						tr
+							file = "4-2-1_F401012"
+							td.cell01 F401012
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") FAQ一覧
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+						tr
+							file = "4-2-1_F402013"
+							td.cell01 F402013
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") FAQ詳細
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+							td.cell03
+								//- a(href="#{domain}jpg/#{file}.jpg", target="_blank") jpg
+							td.cell04 確認待
+
+			article#pageLink00
+				.contentTitleH1
+					h1.title コーディングサンプル
+
+				.contentTitleH2
+					h2.title Sample
+
+				.gnTable.list
+					table
+						tr
+							th.cell01 画面ID
+							th.cell02 ページ名
+						tr
+							file = "sample_title"
+							td.cell01 Title
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") タイトルサンプル
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+						tr
+							file = "sample_btn"
+							td.cell01 Button
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") ボタンサンプル
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+						tr
+							file = "sample_icon"
+							td.cell01 Icon
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") アイコンサンプル
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+						tr
+							file = "sample_error"
+							td.cell01 Error
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") エラーサンプル
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+						tr
+							file = "sample_list"
+							td.cell01 List
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") リストサンプル
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html
+						tr
+							file = "sample_rule"
+							td.cell01 Rule
+							td.cell02
+								p
+									a(href="#{domain}#{file}.html", target="_blank") コーディングルール
+									span.local
+										a(href="#{file}.html", target="_blank") local link
+								p.url #{domain}#{file}.html

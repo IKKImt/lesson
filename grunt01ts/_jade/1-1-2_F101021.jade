@@ -1,0 +1,415 @@
+extends partial/jade/base.jade
+
+//- コンテンツカラム
+block contentColumn
+	- var contentColumn = "oneColumn"
+
+//- ページクラス
+block pageClass
+	- var pageClass = ""
+
+//- 個別CSS
+//- block css
+//- 	link(rel="stylesheet", href="#{assetsCss}style.css")
+
+//- ページタイトル
+block title
+	|F101021 会員情報入力（個人）
+
+//- サイドカラム
+//- block side
+//- 	include partial/jade/side.jade
+
+//- コンテンツ
+block main
+	#main
+		.inner
+			.processFlow
+				.register
+					.registerInner
+						ol
+							li
+								p.text 利用規約の同意
+							li.current
+								p.text お客様情報入力
+							li
+								p.text お客様情報確認
+							li
+								p.text 会員情報登録完了
+				p.icon: img(src="#{assetsImg}common/icon_privacy_mark.png", alt="プライバシーポリシー")
+
+			.contentTitleWrap.head01
+				.leftWrap
+					.contentTitleH1
+						h1.title お客様情報入力
+						p 以下の項目に必要事項を入力し、［確認］を押してください。
+						ul.attention.red
+							li ※マークのある項目は必ず入力してください。
+						p
+							a(href="#", target="_blank") 入力例を表示する
+				.rightWrap
+					p
+						a(href="")
+							img(src="#{assetsImg}common/btn_geotrust.png", alt="")
+
+			.error01
+				p.title 入力エラーがあります。入力内容をご確認ください。
+				.errorList
+					ol
+						li 既に登録されているIDです。他のIDを入力してください。
+						li パスワードを入力してください。
+						li パスワード再入力を入力してください。
+
+			form(method="", action="")
+				//- --------------------------------------------------------
+				.contentTitleH2
+					h2.title アカウントの設定
+
+				fieldset
+					legend
+						|アカウントの設定
+					.gnTable.entry
+						table
+							tr
+								th
+									|会員ID
+									em.required 必須
+									br
+									|（半角英数字、6～8桁）
+								td
+									input(type="text", name="id", class="text breadth200 required", maxlength="8")
+									span.iconHelp01: img(src="#{assetsImg}common/icon_help01.png", alt="")
+							tr
+								th
+									|パスワード
+									em.required 必須
+									br
+									|（半角英数字、6～8桁）
+								td
+									input(type="password", name="pass01", class="text breadth200 required", maxlength="8")
+							tr
+								th
+									|パスワード再入力
+									em.required 必須
+								td
+									input(type="password", name="pass02", class="text breadth200 required")
+
+				//- --------------------------------------------------------
+				.contentTitleH2
+					h2.title お客様基本情報の入力
+					p お手元に本人確認書類（運転免許証、パスポート、在留カードなど）をご用意のうえ、必ず記載通りに入力してください。
+
+				fieldset
+					legend
+						|お客様基本情報の入力
+					.gnTable.entry
+						table
+							tr
+								th
+									|氏名
+									em.required 必須
+									br
+									a(href="#", target="_blank") アルファベットの記入例
+								td
+									.error02
+										.title 本人確認書類の記載どおりにご記入ください。
+										ul
+											li 入力例：ヤマダ　タロウ　様
+											li 日本語表記（姓）Family name → 山田 （名）First name → 太郎
+											li 英語表記（姓）Family name → YAMADA （名）First name → TARO
+									.nameWrap
+										dl
+											dt 日本語表記（全角）
+											dd
+												.boxWrap
+													.box
+														label(for="nameJp01", class="block01")
+															|（姓）Family name
+															em.required 必須
+														input(type="text", name="nameJp01", id="nameJp01", class="text breadth200 required")
+													.box
+														label(for="nameJp02", class="block01")
+															|（名）First name
+															em.required 必須
+														input(type="text", name="nameJp02", id="nameJp02", class="text breadth200 required")
+													.box
+														label(for="nameJp03", class="block01")
+															|ミドルネーム Middle name
+															em.any 任意
+														input(type="text", name="nameJp03", id="nameJp03", class="text breadth200")
+											dt 英語表記（全角）
+											dd
+												.boxWrap
+													.box
+														label(for="nameEn01", class="block01")
+															|（姓）Family name
+															em.required 必須
+														input(type="text", name="nameEn01", id="nameEn01", class="text breadth200 required")
+													.box
+														label(for="nameEn02", class="block01")
+															|（名）First name
+															em.required 必須
+														input(type="text", name="nameEn02", id="nameEn02", class="text breadth200 required")
+													.box
+														label(for="nameEn03", class="block01")
+															|ミドルネーム Middle name
+															em.any 任意
+														input(type="text", name="nameEn03", id="nameEn03", class="text breadth200")
+									p.textRight.mgtb15
+										a(href="")
+											span(class="hint") ミドルネーム入力とは？
+									p
+										input(type="checkbox", name="familyNameCheck", id="familyNameCheck", class="checkbox")
+										label(for="familyNameCheck", class="checkboxLabel") Family nameが2つあります。
+										input(type="text", name="familyName", class="text breadth160")
+							tr
+								th
+									|性別
+									em.required 必須
+								td
+									input(type="radio", name="gender", id="man", class="radio")
+									label(for="man", class="radioLabel mgr10") 男性
+									input(type="radio", name="gender", id="female", class="radio")
+									label(for="female", class="radioLabel") 女性
+							tr
+								th
+									|国籍
+									em.required 必須
+								td
+									select(name="nationality", class="select breadth340 required")
+										option(value="") 選択してください
+							tr
+								th
+									|生年月日
+									em.required 必須
+								td
+									|西暦
+									select(name="year", class="select breadth130 required")
+										option(value="") 選択してください
+									span.mgrl05 年
+									select(name="month", class="select breadth130 required")
+										option(value="") 選択してください
+									span.mgrl05 月
+									select(name="day", class="select breadth130 required")
+										option(value="") 選択してください
+									span.mgrl05 日
+							tr
+								th
+									|メールアドレス（半角）
+									em.required 必須
+								td
+									p.alert02
+										|メインで利用するメールアドレスを選択し、「パソコン用」か「携帯電話/スマートフォン用」かいずれか必ず入力ください。
+										br
+										|「受信確認番号」ボタンをクリックしてください。当時メールアドレス宛に「受信確認番号が送信されます。
+									p
+										input(type="radio", name="mail", id="mailPc", class="radio")
+										label(for="mailPc", class="radioLabel") パソコン用E-mail
+									p.mgt05
+										input(type="email", name="mailPc", class="text breadth200 required")
+										input(type="button", name="mailPcBtn", value="受信確認メール送信")
+									p.mgt15
+										|受信確認番号入力
+										br
+										input(type="email", name="mailPcCheck", class="text breadth200 required")
+									p.mgt15
+										input(type="radio", name="mail", id="mailMobile", class="radio")
+										label(for="mailMobile", class="radioLabel") 携帯電話/スマートフォン用E-mail
+									p.mgt05
+										input(type="email", name="mailMobile", class="text breadth200 required")
+										input(type="button", name="mailMobileBtn", value="受信確認メール送信")
+									p.mgt15
+										|受信確認番号入力
+										br
+										input(type="email", name="mailMobileCheck", class="text breadth200 required")
+							tr
+								th
+									|現住所
+									em.required 必須
+									br
+									a(href="#", target="_blank") 現住所の入力例
+								td
+									p
+										|郵便番号（半角）
+										br
+										input(type="text", name="postal01", class="text required")
+										|&nbsp;-
+										input(type="text", name="postal02", class="text required")
+										input(type="button", name="postalBtn", value="住所検索")
+									.selection
+										dl
+											dt 住所選択
+											dd aaaaa
+											dt 番地・マンション・部屋番号入力
+											dd bbbbb
+									p.mgt15
+										|都道府県・市区町村（英語表記300文字以内）
+										br
+										input(type="text", name="addressJp", class="text breadthBoxSize required")
+									p.mgt15
+										|都道府県・市区町村（英語表記300文字以内）
+										br
+										input(type="text", name="addressEn", class="text breadthBoxSize required")
+							tr
+								th
+									|電話番号
+									em.required 必須
+								td
+									p.alert02
+										|「自宅番号」か「携帯電話」かいずれか必ずご入力ください。
+									.telNumber
+										dl
+											dt 自宅電話番号
+											dd
+												input(type="text", name="tel01", class="text breadth130 required")
+												|&nbsp;-
+												input(type="text", name="tel02", class="text breadth130 required")
+												|&nbsp;-
+												input(type="text", name="tel03", class="text breadth130 required")
+											dt 携帯電話番号
+											dd
+												input(type="text", name="telMobile01", class="text breadth130 required")
+												|&nbsp;-
+												input(type="text", name="telMobile02", class="text breadth130 required")
+												|&nbsp;-
+												input(type="text", name="telMobile03", class="text breadth130 required")
+											dt ファックス番号
+											dd
+												input(type="text", name="fax01", class="text breadth130")
+												|&nbsp;-
+												input(type="text", name="fax02", class="text breadth130")
+												|&nbsp;-
+												input(type="text", name="fax03", class="text breadth130")
+
+				//- --------------------------------------------------------
+				.contentTitleH2
+					h2.title 勤務先情報の入力
+
+				fieldset
+					legend
+						|職業
+					.gnTable.entry
+						table
+							tr
+								th
+									|職業
+									em.required 必須
+								td
+									select(name="profession", class="select required")
+										option(value="") 選択してください
+
+				p.alert01 「主婦」「学生」「その他」を選択した場合で勤務されていない方は、以下の項目の入力は必要ありません。
+
+				fieldset
+					legend
+						|勤務先情報
+					.gnTable.entry
+						table
+							tr
+								th
+									|職種/業種
+									em.required 必須
+								td
+									p
+										span 職種
+										em.required 必須
+										select(name="job", class="select required")
+											option(value="") 選択してください
+										span.mgrl05 業種
+										em.required 必須
+										select(name="business", class="select required")
+											option(value="") 選択してください
+										span.mgrl05 年収
+										em.required 必須
+										select(name="income", class="select required")
+											option(value="") 選択してください
+							tr
+								th
+									|勤務先名
+									em.required 必須
+								td
+									input(type="text", name="workName", class="text breadthBoxSize required")
+							tr
+								th
+									|勤務先電話番号
+									em.any 任意
+								td
+									.telNumber
+										dl
+											dt 自宅電話番号
+											dd
+												input(type="text", name="workTel01", class="text breadth130")
+												|&nbsp;-
+												input(type="text", name="workTel02", class="text breadth130")
+												|&nbsp;-
+												input(type="text", name="workTel03", class="text breadth130")
+											dt ファックス番号
+											dd
+												input(type="text", name="workFax01", class="text breadth130")
+												|&nbsp;-
+												input(type="text", name="workFax02", class="text breadth130")
+												|&nbsp;-
+												input(type="text", name="workFax03", class="text breadth130")
+									p.mgt15
+										input(type="checkbox", name="emergencyContactNumber", id="emergencyContactNumber", class="checkbox")
+										label(for="emergencyContactNumber", class="checkboxLabel") 緊急時にご連絡をしてもよろしいでしょうか。よろしければチェックしてください。
+							tr
+								th
+									|勤務先現住所
+									em.any 任意
+								td
+									p
+										|郵便番号（半角）
+										br
+										input(type="text", name="workPostal01", class="text")
+										|&nbsp;-
+										input(type="text", name="workPostal02", class="text")
+										input(type="button", name="workPostalBtn", value="住所検索")
+									p.mgt15
+										|都道府県・市区町村（英語表記50文字以内）
+										br
+										input(type="text", name="workAddressJp", class="text breadthBoxSize")
+									p.mgt15
+										|都道府県・市区町村（英語表記50文字以内）
+										br
+										input(type="text", name="workAddressEn", class="text breadthBoxSize")
+
+				//- --------------------------------------------------------
+				.contentTitleH2
+					h2.title アンケート、紹介キャンペーン応募
+
+				fieldset
+					legend
+						|アンケート、紹介キャンペーン応募
+					.gnTable.entry
+						table
+							tr
+								th
+									|当サービスをどこで知りましたか
+									em.any 任意
+								td
+									p
+										select(name="service", class="select")
+											option(value="") 選択してください
+									p
+										|紹介コード、キャンペーンコードを入力してください。
+										input(type="text", name="campaignCode", class="text breadth340")
+							tr
+								th
+									|メールマガジン（無料）の登録
+									em.any 任意
+								td
+									input(type="radio", name="newsletter", id="newsletterYes", class="radio")
+									label(for="newsletterYes", class="radioLabel") 登録する
+									select(name="newsletterList", class="select")
+										option(value="") 選択してください
+									input(type="radio", name="newsletter", id="newsletterNo", class="radio")
+									label(for="newsletterNo", class="radioLabel") 登録しない
+
+				.error03
+					p.title
+						|残り12箇所の入力・修正をお願いします
+						input(type="button", name="error", value="該当箇所へ移動↑")
+
+				.btnWrap
+					input(type="submit", value="確認", class="submit")

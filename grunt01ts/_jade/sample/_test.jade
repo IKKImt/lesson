@@ -1,0 +1,40 @@
+extends ../partial/_base.jade
+
+//- コンテンツカラム
+block contentColumn
+	- var contentColumn = "oneColumn"
+
+//- ページクラス
+//- block pageClass
+//- 	- var pageClass = ""
+
+//- 個別CSS
+block css
+	link(rel="stylesheet", href="#{assetsCss}test.css")
+
+//- サイドカラム
+//- block side
+//- 	include partial/jade/side.jade
+
+//- コンテンツ
+block main
+	#main
+		.inner
+			h1.test
+				|テスト
+			h2.test
+				|テスト
+			h3.test
+				|テスト
+			h4.test
+				|テスト
+			h5.test
+				|テスト
+			h6.test
+				|テスト
+			p.test.red1
+				|テスト
+			p(style="font-size:16px;")
+				|テスト
+			//- p(style="font-size:85%;")
+			//- 	|テスト

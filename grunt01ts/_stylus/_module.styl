@@ -1,0 +1,39 @@
+.none
+	display none
+
+.clear
+	clear both
+
+.clearfix
+	\/zoom 1
+	&:after
+		display table
+		content ""
+		clear both
+
+.notes1em
+	padding-left 1em
+	text-indent -1em
+
+.notes2em
+	padding-left 2em
+	text-indent -2em
+
+
+
+
+
+// -------------------------------------------------------
+// - 連番クラス作成
+//
+// $arrowBase
+// 	padding 0 0 0 15px
+// 	background-position left .4em
+// 	background-repeat no-repeat
+
+// for $i in 1 .. 3
+// 	.iconArrow{$i}
+// 		@extend $arrowBase
+// 		// background-image url(imgPath/icon_arrow.png)
+// 		background-image unquote('url("imgPath/icon_arrow' + $i + '.png")')
+// -------------------------------------------------------

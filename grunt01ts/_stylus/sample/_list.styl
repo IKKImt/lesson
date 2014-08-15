@@ -1,0 +1,53 @@
+@charset "UTF-8";
+@import 'nib'
+@import '../partial/_config'
+
+.notesDot
+	// @extend .notes1em
+	li
+		&:before
+			content "・"
+
+.pageLinks
+	margin 30px 0
+	ol.notesDot
+		li
+			display inline-block
+			margin-right 20px
+
+.contentTitleH1
+	.title
+		font-size fz + 12px
+
+.contentTitleH2
+	.title
+		font-size fz + 8px
+
+.list
+	table
+		tr
+			// vertical-align top
+			th
+			td
+				text-align center
+			th.cell01
+				width 80px
+			th.cell02
+				width auto
+			th.cell03
+			th.cell04
+				width 40px
+			td.cell01
+				color #F66
+			td.cell02
+				text-align left
+			.url
+				margin-top 5px
+				padding-top 5px
+				border-top 1px solid #ccc
+				color #999
+			.local
+				margin 0 20px
+		tr:nth-of-type(2n)
+			td
+				background-color #f4f0e4

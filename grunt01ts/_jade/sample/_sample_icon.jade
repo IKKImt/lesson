@@ -1,0 +1,90 @@
+extends ../partial/_base.jade
+
+//- コンテンツカラム
+block contentColumn
+	- var contentColumn = "oneColumn"
+
+//- ページクラス
+block pageClass
+	- var pageClass = ""
+
+//- 個別CSS
+//- block css
+//- 	link(rel="stylesheet", href="#{assetsCss}style.css")
+
+//- ページタイトル
+block title
+	|アイコンサンプル
+
+//- サイドカラム
+//- block side
+//- 	include partial/jade/side.jade
+
+//- コンテンツ
+block main
+	#main
+		.inner
+			.contentTitleH1
+				h1.title アイコンサンプル
+
+			.mgt50
+				p
+					a(href="", target="_blank") 新規ウィンドウリンク
+				p
+					a(href="sample.pdf") PDFリンク
+
+			.mgt50
+				p.iconArrow01
+					a(href="") pクラス
+				ul.iconArrow01
+					li
+						a(href="") ulリスト
+					li ulリスト
+
+			.mgt50
+				p.iconArrow02
+					a(href="") pクラス
+				ul.iconArrow02
+					li
+						a(href="") ulリスト
+					li ulリスト
+
+			.mgt50
+				p.iconArrow03
+					a(href="") pクラス
+				ul.iconArrow03
+					li
+						a(href="") ulリスト
+					li ulリスト
+
+			.mgt50
+				p.iconArrow04
+					a(href="") pクラス
+				ul.iconArrow04
+					li
+						a(href="") ulリスト
+					li ulリスト
+
+			div(style="background-color: #999;").mgt50.pd10
+				p.iconArrow05
+					a(href="") pクラス
+				ul.iconArrow05
+					li
+						a(href="") ulリスト
+					li ulリスト
+
+			.mgt50
+				p.iconArrow06
+					a(href="") pクラス
+				ul.iconArrow06
+					li
+						a(href="") ulリスト
+					li ulリスト
+
+			.mgt50
+				p.iconArrow07
+					a(href="") pクラス
+				ul.iconArrow07
+					li
+						a(href="") ulリスト
+					li ulリスト

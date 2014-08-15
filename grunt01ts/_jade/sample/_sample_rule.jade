@@ -1,0 +1,143 @@
+extends ../partial/_base.jade
+
+//- コンテンツカラム
+block contentColumn
+	- var contentColumn = "oneColumn"
+
+//- ページクラス
+block pageClass
+	- var pageClass = ""
+
+//- 個別CSS
+//- block css
+//- 	link(rel="stylesheet", href="#{assetsCss}style.css")
+
+//- ページタイトル
+block title
+	|コーディングルール
+
+//- サイドカラム
+//- block side
+//- 	include partial/jade/side.jade
+
+//- コンテンツ
+block main
+	#main
+		.inner
+			.contentTitleH1
+				h1.title コーディングルール
+
+			.contentTitleH2
+				h2.title 対象ブラウザ
+				p IE8〜10、Firefox、Chrome、safari
+
+			.contentTitleH2
+				h2.title ディレクトリ
+				p
+					|Gruntを使用し、jade→HTML、stylus→cssへとコンパイルされています。
+					br
+					|コーディングの進行により、main.cssを随時更新しています。
+
+			.mgtb30
+				.gnTitle.gray
+					p.title
+						span
+						|ルート
+
+				pre
+					├─assets
+					│  ├─css
+					│  │  ├─main.css
+					│  │  └─print.css
+					│  ├─img
+					│  │  ├─bnr
+					│  │  ├─common
+					│  │  └─index
+					│  └─js
+					├─index.html
+					├─1-1-1_F101011a.html
+					├─1-1-1_F101011b.html
+					├─1-1-2_F101021.html
+					├─1-1-2_F101022.html
+					├─2-1-1_F201011b.html
+					├─2-3-1_F203012.html
+					├─2-5-1_F205011.html
+					├─2-6-1_F206011.html
+					├─3-1-1_F301011.html
+					├─3-1-1_F301016.html
+					└─4-1-1_F401012.html
+
+			.contentTitleH2
+				h2.title レイアウト
+				p 1カラム、2カラムの設定はクラスで分けています。
+
+			.mgtb30
+				.contentTitleH3
+					h3.title
+						span
+						|1カラム
+
+				pre
+					code
+						|&lt;div id="contents" class="
+						span.red01 oneColumn
+						|"&gt;
+
+				.contentTitleH3
+					h3.title
+						span
+						|2カラム
+
+				pre
+					code
+						|&lt;div id="contents" class="
+						span.red01 twoColumn
+						|"&gt;
+
+			.contentTitleH2
+				h2.title IE8、9対応について
+
+			.mgtb30
+				.contentTitleH3
+					h3.title
+						span
+						|HTML5のタグ対策
+
+				p html5shiv-printshiv.jsにて解釈させています。
+				p
+					a(href="https://code.google.com/p/html5shiv/", target="_blank") html5shiv-printshiv.js
+
+				.contentTitleH3
+					h3.title
+						span
+						|グラデーション対策
+
+				p
+					|IE8には、PIE.htc。
+					br
+					|IE9には、SVGを使い表現。
+				p
+					a(href="http://ie.microsoft.com/testdrive/Graphics/SVGGradientBackgroundMaker/Default.html", target="_blank") SVG Gradient Background Maker
+
+
+
+
+
+
+
+
+
+			//- .contentTitleH3
+			//- 	h3.title
+			//- 		span
+			//- 		|H3タイトル
+
+			//- .gnTitle.gray
+			//- 	p.title
+			//- 		span
+			//- 		|汎用タイトル
+
+			//- .gnTitle.red
+			//- 	p.title
+			//- 		span
+			//- 		|汎用タイトル

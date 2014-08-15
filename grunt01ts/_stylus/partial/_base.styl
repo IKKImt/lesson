@@ -1,0 +1,33 @@
+// -------------------------------------------------------
+// ベーススタイル
+// 要素の初期化後、サイトに合わせて要素を再設定
+// -------------------------------------------------------
+html
+	font-size fz
+	-ms-overflow-y scroll
+	overflow-y scroll
+
+body
+	min-width 1180px
+	background baseColor
+	// font-family "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif
+	font-family "メイリオ", "Meiryo", Sans-Serif
+	fz(14)
+	-webkit-text-size-adjust 100%
+	line-height 1.6
+	color fontColor
+
+a
+	&:link
+		text-decoration none
+		color #0099CC
+	&:visited
+		text-decoration none
+		color #0099CC
+	&:hover
+		text-decoration underline
+		color #0099CC
+	&:active
+		text-decoration none
+		color #0099CC
+

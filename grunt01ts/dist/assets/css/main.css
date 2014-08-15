@@ -1,4 +1,7 @@
 @charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
 html,
 body,
 div,
@@ -180,7 +183,6 @@ ins {
   color: #000;
 }
 html {
-  font-size: 14px;
   -ms-overflow-y: scroll;
   overflow-y: scroll;
 }
@@ -207,6 +209,10 @@ a:hover {
 a:active {
   text-decoration: none;
   color: #09c;
+}
+.test {
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 #page {
   background: #fff;
